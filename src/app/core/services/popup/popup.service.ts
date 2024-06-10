@@ -34,9 +34,11 @@ export class PopupService {
       ElementComponentRef.destroy();
     });
 
+    if (!conf.timeout) conf.timeout = 3000;
     setTimeout(() => {
-      document.body.appendChild(NewElement);
-    }, ElementComponentRef.instance.timeout || 3000);
+      this.applicationRef.detachView(ElementComponentRef.hostView);
+      ElementComponentRef.destroy();
+    }, conf.timeout);
 
 
     ElementComponentRef.instance.title = conf.title;

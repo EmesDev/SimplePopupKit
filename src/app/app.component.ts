@@ -20,6 +20,7 @@ export class AppComponent {
       title: 'Popup Title',
       message: 'Popup Message',
       theme: EnumPopupTheme.DEFAULT,
+
     });
   }
 }
