@@ -4,5 +4,7 @@ export interface InterfaceGenericPopup {
     title: string;
     message: string;
     closed?: any;
+    timeout?: number;
     theme: EnumPopupTheme
+
 }

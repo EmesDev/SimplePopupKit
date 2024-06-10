@@ -32,7 +32,12 @@ export class PopupService {
     ElementComponentRef.instance.closed.subscribe(() => {
       this.applicationRef.detachView(ElementComponentRef.hostView);
       ElementComponentRef.destroy();
-    })
+    });
+
+    setTimeout(() => {
+      document.body.appendChild(NewElement);
+    }, ElementComponentRef.instance.timeout || 3000);
+
 
     ElementComponentRef.instance.title = conf.title;
     ElementComponentRef.instance.message = conf.message;
@@ -40,4 +45,5 @@ export class PopupService {
 
     document.body.appendChild(NewElement);
   }
+
 }
