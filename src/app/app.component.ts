@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { PopupService } from './core/services/popup/popup.service';
-import { GenericPopupComponent } from './shared/generic-popup/generic-popup.component';
-import { EnumPopupTheme } from './shared/types/enums/EnumPopupTheme';
+import { EnumPopupTheme, GenericPopupComponent, PopupService } from 'simple-popup-lib';
 
 @Component({
   selector: 'app-root',
