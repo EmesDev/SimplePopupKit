@@ -91,6 +91,72 @@
           }
         }
       }
+    },
+    "SimplePopupKitLib": {
+      "projectType": "library",
+      "root": "projects/simple-popup-kit-lib",
+      "sourceRoot": "projects/simple-popup-kit-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/simple-popup-kit-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/simple-popup-kit-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/simple-popup-kit-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/simple-popup-kit-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
+    },
+    "SimplePopupLib": {
+      "projectType": "library",
+      "root": "projects/simple-popup-lib",
+      "sourceRoot": "projects/simple-popup-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/simple-popup-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/simple-popup-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/simple-popup-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/simple-popup-lib/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }

@@ -2,6 +2,14 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "SimplePopupKitLib": [
+        "./dist/simple-popup-kit-lib"
+      ],
+      "SimplePopupLib": [
+        "./dist/simple-popup-lib"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
     "noImplicitOverride": true,
