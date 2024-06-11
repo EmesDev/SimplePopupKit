@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { EnumPopupTheme } from '../types/enums/EnumPopupTheme';
-import { InterfaceGenericPopup } from '../types/interfaces/InterfaceGenericPopup';
+import { EnumPopupTheme } from '../../types/enums';
+import { InterfaceGenericPopup } from './../../types/interfaces';
 
 @Component({
   selector: 'app-generic-popup',
@@ -10,14 +10,7 @@ import { InterfaceGenericPopup } from '../types/interfaces/InterfaceGenericPopup
   styleUrl: './generic-popup.component.css',
 })
 export class GenericPopupComponent implements InterfaceGenericPopup {
-  @Input()
-  get title(): string {
-    return this._title;
-  }
-  set title(value: string) {
-    this._title = value;
-  }
-  private _title = '';
+  types = EnumPopupTheme;
 
   @Input()
   get message(): string {

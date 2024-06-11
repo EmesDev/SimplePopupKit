@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { EnumPopupTheme, GenericPopupComponent, PopupService } from 'simple-popup-lib';
+import { EnumPopupTheme, GenericPopupComponent, PopupService } from '../../projects/simple-popup-lib/src/public-api';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, GenericPopupComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {
   constructor(private popupService: PopupService) {}
   title = 'SimplePopupKit';
+  theme = EnumPopupTheme.SUCCESS;
 
   openPopup() {
     this.popupService.ShowAsComponent(GenericPopupComponent, {
-      title: 'Popup Title',
       message: 'Popup Message',
-      theme: EnumPopupTheme.DEFAULT,
+      theme: EnumPopupTheme.WARNING,
 
     });
   }

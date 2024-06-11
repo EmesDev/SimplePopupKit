@@ -41,7 +41,6 @@ export class PopupService {
     }, conf.timeout);
 
 
-    ElementComponentRef.instance.title = conf.title;
     ElementComponentRef.instance.message = conf.message;
     ElementComponentRef.instance.theme = conf.theme;
 
