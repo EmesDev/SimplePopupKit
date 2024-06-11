@@ -1,0 +1,2 @@
+export { InterfaceGenericPopup } from './InterfaceGenericPopup';
+
