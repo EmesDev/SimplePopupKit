@@ -8,6 +8,7 @@ DEFAULT = 'default-alert', */
   width: 320px;
   padding: 12px;
   display: flex;
+
   flex-direction: row;
   align-items: center;
   justify-content: start;
@@ -18,8 +19,8 @@ DEFAULT = 'default-alert', */
 }
 
 .icon {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
   margin-right: 8px;
 }
 
@@ -27,7 +28,7 @@ DEFAULT = 'default-alert', */
   margin-left: auto;
   cursor: pointer;
   display: flex;
-    align-items: center;
+  align-items: center;
 }
 
 /* themes */
@@ -70,4 +71,59 @@ DEFAULT = 'default-alert', */
   .custon-icon {
     fill: #c0c0c0;
   }
+}
+
+/* position */
+
+
+.position-top-left,
+.position-top-right,
+.position-top-center,
+.position-bottom-left,
+.position-bottom-right,
+.position-bottom-center {
+  position: absolute;
+  z-index: 9999;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.position-top-left {
+  top: 0;
+  left: 10px;
+  transform: translate(0, 10px);
+}
+
+.position-top-right {
+  top: 0;
+  right: 10px;
+  transform: translate(0, 10px);
+}
+
+.position-top-center {
+  top: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  transform: translate(0, 10px);
+}
+
+.position-bottom-left {
+  bottom: 0;
+  left: 10px;
+  transform: translate(0, -10px);
+}
+
+.position-bottom-right {
+  bottom: 0;
+  right: 10px;
+  transform: translate(0, -10px);
+}
+
+.position-bottom-center {
+  bottom:  10px;
+  display: flex;
+  justify-content: center;
+  width: 97%;
+  transform: translate(0, 10px);
 }

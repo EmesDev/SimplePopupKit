@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { EnumPopupTheme } from '../../types/enums';
-import { InterfaceGenericPopup } from './../../types/interfaces';
+import { EnumPopupPosition, EnumPopupTheme } from '../../types/enums';
+import { InterfaceGenericPopup } from '../../types/interfaces';
 
 @Component({
   selector: 'app-generic-popup',
@@ -29,6 +29,15 @@ export class GenericPopupComponent implements InterfaceGenericPopup {
     this._theme = value;
   }
   private _theme = EnumPopupTheme.DEFAULT;
+  
+  @Input()
+  get position(): EnumPopupPosition {
+    return this._position;
+  }
+  set position(value: EnumPopupPosition) {
+    this._position = value;
+  }
+  private _position = EnumPopupPosition.TOP_RIGHT;
 
   @Output()
   closed = new EventEmitter<void>();

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { EnumPopupTheme, GenericPopupComponent, PopupService } from '../../projects/simple-popup-lib/src/public-api';
+import { EnumPopupPosition, EnumPopupTheme, GenericPopupComponent, PopupService } from '../../projects/simple-popup-lib/src/public-api';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +18,8 @@ export class AppComponent {
     this.popupService.ShowAsComponent(GenericPopupComponent, {
       message: 'Popup Message',
       theme: EnumPopupTheme.WARNING,
+      timeout: 3000,
+      position: EnumPopupPosition.BOTTOM_RIGHT,
 
     });
   }
