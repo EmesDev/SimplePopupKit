@@ -18,7 +18,7 @@ NPM library for popup injection in a simplified and fast way. Created by @EmesDe
     ng generate library SimplePopupLib
 ```
 <h4>Building project</h4>
-'
+
 ```bash
     ng build SimplePopupLib
 
