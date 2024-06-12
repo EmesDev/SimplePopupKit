@@ -1,24 +1,41 @@
-# SimplePopupLib
+# SimplePupupKit
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0.
 
-## Code scaffolding
+NPM library for popup injection in a simplified and fast way. Created by @EmesDev.
 
-Run `ng generate component component-name --project SimplePopupLib` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project SimplePopupLib`.
-> Note: Don't forget to add `--project SimplePopupLib` or else it will be added to the default project in your `angular.json` file. 
 
-## Build
+<div align="center">
+<img alt="Static Badge" src="https://img.shields.io/badge/Angular-v18-blue?style=plastic&logo=angular&logoColor=%23ff2e2e&logoSize=auto&labelColor=%23303030">
+<img alt="Static Badge" src="https://img.shields.io/badge/NPM-v21-blue?style=plastic&logo=NPM&logoColor=red&logoSize=auto&labelColor=%23303030">
+</div>
 
-Run `ng build SimplePopupLib` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Publishing
+## Building the library 
 
-After building your library with `ng build SimplePopupLib`, go to the dist folder `cd dist/simple-popup-lib` and run `npm publish`.
+<h4>Command used to create the library</h4>
 
-## Running unit tests
+```bash
+    ng generate library SimplePopupLib
+```
+<h4>Building project</h4>
+'
+```bash
+    ng build SimplePopupLib
 
-Run `ng test SimplePopupLib` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    or
 
-## Further help
+    npm pack
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+<h4>Uploading project to NPM</h4>
+
+```bash
+    cd dist/simple-popup-lib
+
+    npm publish
+```
+<h4>Installation</h4>
+
+```bash
+    npm install simple-popup-lib
+```
